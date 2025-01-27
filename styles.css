@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  background: hsla(18, 76%, 85%, 1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    90deg,
+    hsla(18, 76%, 85%, 1) 0%,
+    hsla(203, 69%, 84%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(18, 76%, 85%, 1) 0%,
+    hsla(203, 69%, 84%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(18, 76%, 85%, 1) 0%,
+    hsla(203, 69%, 84%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F6CFBE", endColorstr="#B9DCF2", GradientType=1 );
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+.typing-container {
+  font-size: 10vw;
+  border-right: 3px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(22) forwards, blink 0.7s infinite;
+  font-weight: bold;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12ch;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
